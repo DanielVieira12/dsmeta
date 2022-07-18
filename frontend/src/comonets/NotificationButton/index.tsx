@@ -5,7 +5,7 @@ import { BASE_URL } from '../utils/request';
 import './styles.css'
 
 
-type props = {
+type Props = {
 
 
   saleId: number;
@@ -13,14 +13,14 @@ type props = {
 
 }
 
-function handleClick(id: Number){
-  axios(`${BASE_URL}/sales${id}/Notification`)
+function handleClick(saleId: number){
+  axios(`${BASE_URL}/sales/${saleId}/notification`)
     .then(Response => {
       console.log("sucesso");
     })
 }
 
-function NotificationButton( {saleId} : props) {
+function NotificationButton( {saleId} : Props) {
  
     return (
 
