@@ -18,7 +18,9 @@ function handleClick(saleId: number){
   axios(`${BASE_URL}/sales/${saleId}/notification`)
     .then(Response => {
     toast.info("SMS ENVIADO COM SUCESSO!");
+    window.navigator.vibrate(500);
     })
+
 }
 
 function NotificationButton( {saleId} : Props) {
